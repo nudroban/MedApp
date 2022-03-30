@@ -18,6 +18,7 @@ gem "coffee-rails"
 gem "jquery-rails"
 gem "turbolinks"
 gem "uglifier"
+gem 'bootstrap-sass'
 
 
 group :development, :test do
