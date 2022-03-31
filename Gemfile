@@ -19,6 +19,7 @@ gem "jquery-rails"
 gem "turbolinks"
 gem "uglifier"
 gem 'bootstrap-sass'
+gem "bcrypt"
 
 
 group :development, :test do
