@@ -13,6 +13,8 @@
 <body>
 <%= render 'layouts/header' %>
 <div class="container">
+  <p><%= notice %></p>
+  <p><%= alert %></p>
   <%= yield %>
   <%= render 'layouts/footer' %>
   <%= debug(params) if Rails.env.development? %>
