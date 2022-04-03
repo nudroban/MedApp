@@ -2,8 +2,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: illia
-  password: qwerty1234
+  username: admin
+  database: newdb
+  password: 'qwerty'
   host: <%= ENV['POSTGRES_HOST'] %>
 
 development:
@@ -11,5 +12,9 @@ development:
   database: testdb
 
 test:
+  <<: *default
+  database: testdb
+
+production:
   <<: *default
   database: testdb
