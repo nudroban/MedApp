@@ -1,0 +1,27 @@
+<%= form_with(model: recomendation) do |form| %>
+  <% if recomendation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recomendation.errors.count, "error") %> prohibited this recomendation from being saved:</h2>
+
+      <ul>
+        <% recomendation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -18,11 +18,14 @@ gem "coffee-rails"
 gem "jquery-rails"
 gem "turbolinks"
 gem "uglifier"
-
+gem 'bootstrap-sass'
+gem "bcrypt"
+gem "pg"
+gem "devise"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem "sqlite3"
+  #gem 'sqlite3', '~> 1.4'
   gem "byebug"
 end
 
@@ -43,5 +46,6 @@ end
 
 group :production do
   gem "pg"
+  gem "rails_12factor"
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
