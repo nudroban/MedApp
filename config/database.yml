@@ -25,3 +25,5 @@ test:
 production:
   <<: *default
   database: newdb
+    username: illia
+    password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
