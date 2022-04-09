@@ -22,6 +22,8 @@ gem 'bootstrap-sass'
 gem "bcrypt"
 gem "pg"
 gem "devise"
+gem "activeadmin"
+gem "cancancan"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
