@@ -13,4 +13,12 @@ class User < ApplicationRecord
   def email_changed?
     false
   end
+
+  def doctor?
+    user_type == 'doctor'
+  end
+
+  def patient?
+    user_type == 'patient'
+  end
 end

@@ -10,5 +10,6 @@
     </p>
   <% end %>
 </div>
-
+<% if current_user.doctor? %>
 <%= link_to "New recomendation", new_recomendation_path %>
+<% end %>

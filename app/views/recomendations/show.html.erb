@@ -1,10 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @recomendation %>
-
+<% if current_user.doctor? %>
 <div>
   <%= link_to "Edit this recomendation", edit_recomendation_path(@recomendation) %> |
   <%= link_to "Back to recomendations", recomendations_path %>
 
   <%= button_to "Destroy this recomendation", @recomendation, method: :delete %>
 </div>
+<% else %>
+<%= link_to "Back to recomendations", recomendations_path %>
+<% end %>

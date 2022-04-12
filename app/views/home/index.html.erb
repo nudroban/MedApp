@@ -5,10 +5,11 @@
   </h2>
   <% if user_signed_in? %>
     <span>Welcome, <%= current_user.phone %></span>
+    <p class="center jumbotron">You are <%= current_user.user_type %></p>
     <h2><%= link_to "Recomendations", recomendations_url %></h2>
-      <%= button_to "Logout", destroy_user_session_path, :method => :delete, class: "btn btn-lg btn-primary" %>
+      <%= button_to "Logout", destroy_user_session_path, :method => :delete, class: "btn btn-lg btn-primary", data: { turbo: "false" } %>
   <% else %>
-    <%= link_to 'Sign in', new_user_registration_path, class: "btn btn-lg btn-primary" %> or <%= link_to 'Log in', new_user_session_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to 'Sign in', new_user_registration_path, class: "btn btn-lg btn-primary", data: { turbo: "false" } %> or <%= link_to 'Log in', new_user_session_path, class: "btn btn-lg btn-primary", data: { turbo: "false" } %>
   <% end %>
 </div>
 <div>

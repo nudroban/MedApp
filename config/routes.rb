@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :users
+      resources :recomendations
+
+      root to: "users#index"
+    end
   resources :recomendations
   devise_for :users,
   controllers: {
