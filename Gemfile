@@ -11,7 +11,6 @@ gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "sass-rails"
 gem "coffee-rails"
@@ -22,6 +21,8 @@ gem 'bootstrap-sass'
 gem "bcrypt"
 gem "pg"
 gem "devise"
+gem "activeadmin"
+gem "cancancan"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -48,4 +49,4 @@ group :production do
   gem "pg"
   gem "rails_12factor"
 end
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+

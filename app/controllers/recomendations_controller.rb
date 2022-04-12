@@ -1,6 +1,7 @@
 class RecomendationsController < ApplicationController
   before_action :set_recomendation, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!
+  load_and_authorize_resource
   # GET /recomendations or /recomendations.json
   def index
     @recomendations = Recomendation.all
@@ -13,7 +14,7 @@ class RecomendationsController < ApplicationController
 
   # GET /recomendations/new
   def new
-    @recomendation = Recomendation.new
+    @recomendation = current_user.recomendations.build
   end
 
   # GET /recomendations/1/edit
@@ -22,7 +23,7 @@ class RecomendationsController < ApplicationController
 
   # POST /recomendations or /recomendations.json
   def create
-    @recomendation = Recomendation.new(recomendation_params)
+    @recomendation = current_user.recomendations.build(recomendation_params)
 
     respond_to do |format|
       if @recomendation.save
